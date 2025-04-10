@@ -1,10 +1,6 @@
 package chessgame.pieces;
 
 import java.awt.Graphics;
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f51f23a094c9fd7d4b145133a0ab0ac27cf2471
 import chessgame.Piece;
 
 public class Pawn extends Piece {
@@ -20,7 +16,6 @@ public class Pawn extends Piece {
         
         // Standard move
         if (startCol == endCol && board[endRow][endCol] == null) {
-<<<<<<< HEAD
             // Always allow single step forward
             if (startRow + direction == endRow) {
                 return true;
@@ -29,20 +24,12 @@ public class Pawn extends Piece {
             if (!hasMoved && 
                 ((isWhite && startRow == 6) || (!isWhite && startRow == 1)) &&
                 startRow + 2 * direction == endRow && 
-=======
-            if (startRow + direction == endRow) return true;
-            if (!hasMoved && startRow + 2 * direction == endRow && 
->>>>>>> 7f51f23a094c9fd7d4b145133a0ab0ac27cf2471
                 board[startRow + direction][startCol] == null) {
                 return true;
             }
         }
         
-<<<<<<< HEAD
         // Capture moves remain unchanged
-=======
-        // Capture
->>>>>>> 7f51f23a094c9fd7d4b145133a0ab0ac27cf2471
         if (Math.abs(startCol - endCol) == 1 && startRow + direction == endRow && 
             board[endRow][endCol] != null && board[endRow][endCol].getColor() != isWhite) {
             return true;
@@ -52,7 +39,6 @@ public class Pawn extends Piece {
     }
     
     @Override
-<<<<<<< HEAD
     public void move(int startRow, int startCol, int endRow, int endCol, Piece[][] board) {
         // Mark the pawn as moved after any move
         hasMoved = true;
@@ -63,10 +49,4 @@ public class Pawn extends Piece {
     public void draw(Graphics g, int x, int y, int tileSize) {
         drawPiece(g, isWhite ? "♙" : "♟", x, y, tileSize);
     }
-=======
-    public void draw(Graphics g, int x, int y, int tileSize) {
-        drawPiece(g, isWhite ? "♙" : "♟", x, y, tileSize);
-    }
-
->>>>>>> 7f51f23a094c9fd7d4b145133a0ab0ac27cf2471
 }

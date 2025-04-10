@@ -1,10 +1,7 @@
 package chessgame;
 
 import java.awt.*;
-<<<<<<< HEAD
-=======
 
->>>>>>> 7f51f23a094c9fd7d4b145133a0ab0ac27cf2471
 import javax.swing.*;
 
 public class ChessGame {
